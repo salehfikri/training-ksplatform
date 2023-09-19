@@ -1,0 +1,52 @@
+<html lang="en">
+  <head>
+    <title>UI Components</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      :root {
+        --bs-font-sans-serif: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+      }
+    </style>
+  </head>
+
+  <body class="d-flex align-items-center justify-content-center h-100">
+    <div class="container">
+      <div class="p-4">
+        <p>Create snippet for each of the following.</p>
+
+        <h5>Alert</h5>
+
+        <div class="alert alert-primary" role="alert">Code verification sent to your email!</div>
+
+        <hr />
+
+        <h5>Dropdown</h5>
+
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">Options</button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Edit</a></li>
+          </ul>
+        </div>
+
+        <hr />
+
+        <h5>Scripts</h5>
+        <p>Refer script tag below</p>
+      </div>
+    </div>
+
+    <script>
+      fetch('https://catfact.ninja/fact')
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data)
+        })
+        .catch((error) => {
+          console.error('There was a problem with the fetch operation:', error)
+        })
+    </script>
+  </body>
+</html>
